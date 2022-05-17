@@ -27,24 +27,11 @@ export default [
     ],
     plugins: [
       peerDepsExternal(),
-      postcss({
-        minimize: true,
-        modules: true,
-        use: {
-            sass: null,
-            stylus: null,
-            less: { javascriptEnabled: true }
-        }, //, modifyVars: antdVars }},,
-        extract: true,
-        config: {
-            path: './postcss.config.js',
-            ctx: null
-        }
-      }),
+     
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
-      
+      postcss(),
       terser(),
     ],
   },
@@ -54,4 +41,8 @@ export default [
     plugins: [dts()],
     external: [/\.css$/],
   },
+  {
+    input: "tailwind.config.js",
+    output: [{file: "dist/tailwind.config.js"}]
+  }
 ];
