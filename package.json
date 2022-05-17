@@ -1,14 +1,17 @@
 {
-  "name": "oa-fe-library",
-  "version": "2.0.1",
-  "description": "Openagent - Frontend component library",
+  "name": "@bibr/react-component-library",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/bibr"
+  },
+  "version": "2.0.2",
+  "description": " - Frontend component library",
   "scripts": {
     "rollup": "rollup -c",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "author": "OpenAgent",
+  "author": "Pramod",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.17.12",
@@ -58,5 +61,4 @@
   "resolutions": {
     "webpack": "^5"
   }
-
 }
